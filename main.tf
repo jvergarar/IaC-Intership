@@ -69,4 +69,7 @@ module "ec2_instance" {
         instancetype = var.instancetype
         key_pair = var.key_pair
         vol_size = var.vol_size
+        sg=["${aws_security_group.iac-Bastion-sg.id}"]
+        subnet="${aws_subnet.iac-PublicSubnet.id}"
+
 }

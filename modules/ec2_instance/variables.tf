@@ -13,3 +13,9 @@ variable "key_pair" {
 variable "vol_size" {
   description = "Volumen size"
 }
+variable "sg" {
+  description = "security group id"
+}
+variable "subnet" {
+  description = "subnet id"
+}
