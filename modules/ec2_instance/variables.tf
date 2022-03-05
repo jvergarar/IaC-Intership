@@ -1,9 +1,6 @@
 variable "environment" {
   description = "Environment"
 }
-variable "service" {
-  description = "Choose Frontend, backend and database service"
-}
 variable "image" {
   description = "Image ID"
 }
