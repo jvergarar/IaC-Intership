@@ -31,7 +31,7 @@ resource "aws_subnet" "iac-PublicSubnet"{
 
 resource "aws_security_group" "iac-Bastion-sg" {
   name   = "iac-Bastion-sg"
-  vpc_id = "${aws_vpc.rjv-vpc.id}"
+  vpc_id = "${aws_vpc.iac-vpc.id}"
   ingress {
     description = "Inet access"
     from_port   = 8080
