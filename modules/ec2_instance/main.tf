@@ -2,8 +2,8 @@ resource "aws_instance" "iac-ec2-instance" {
   ami = var.image
   instance_type = var.instancetype
   key_name = var.key_pair
-  security_groups = ["${data.aws_security_group.security_group.id}"]
-  subnet_id= "${data.aws_subnet.iac-subnet.id}"
+  security_groups = ["${aws_security_group.iac-Bastion-sg.id}"]
+  subnet_id= "${aws_subnet.iac-PublicSubnet.id}"
   root_block_device{
     volume_type = "gp2"
     volume_size = var.vol_size
